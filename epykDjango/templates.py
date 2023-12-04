@@ -3,7 +3,7 @@ import sys
 
 from epyk.core.Page import Report
 
-template_path = os.path.join('views', 'reports')
+template_path = os.path.join('app', 'reports')
 sys.path.append(template_path)
 
 if __name__ == '__main__':
@@ -16,4 +16,4 @@ if __name__ == '__main__':
             mod = __import__(view_name)
             page = Report()
             mod.get_page(page)
-            print(page.outs.html_file(path=os.path.join('views', 'templates', 'views'), name=view_name))
+            print(page.outs.html_file(path=os.path.join('app', 'templates', 'views'), name=view_name))
