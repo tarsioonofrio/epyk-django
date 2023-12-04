@@ -17,4 +17,4 @@ def refresh(view_name):
     mod = __import__(view_name)
     page = Report()
     mod.get_page(page)
-    print(page.outs.html_file(path=os.path.join("epykDjango", 'views', 'templates', 'views'), name=view_name))
+    print(page.outs.html_file(path=os.path.join('app', 'templates', 'views'), name=view_name))
