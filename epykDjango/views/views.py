@@ -47,7 +47,7 @@ def viewer(request, name):
     if request.GET.get('refresh') == 'Y':
         templates.refresh(name)
 
-    return render(request, 'views/%s.html' % name, {})
+    return render(request, 'views/%.html' % name, {})
 
 
 def chart(request):
