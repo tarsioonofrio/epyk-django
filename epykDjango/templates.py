@@ -3,7 +3,7 @@ import sys
 
 from epyk.core.Page import Report
 
-template_path = os.path.join('epykDjango', 'reports')
+template_path = os.path.join('views', 'reports')
 sys.path.append(template_path)
 
 if __name__ == '__main__':
