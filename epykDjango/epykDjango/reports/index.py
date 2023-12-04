@@ -1,18 +1,14 @@
-
-
 def get_page(rptObj):
-  """
-  Description:
-  ------------
+    """
+    Description:
+    ------------
 
-  Attributes:
-  ----------
-  :param rptObj:
+    Attributes:
+    ----------
+    :param rptObj:
 
-  :rtype: epyk.core.Page.Report
-  """
-  rptObj.headers.dev()
-  rptObj.ui.div("Hellow World {{ name }}!")
-  return rptObj
-
-
+    :rtype: epyk.core.Page.Report
+    """
+    rptObj.headers.dev()
+    rptObj.ui.div("Hellow World {{ name }}!")
+    return rptObj

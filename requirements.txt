@@ -1,2 +1,2 @@
-epyk
-
+Django~=3.0
+epyk~=1.0.15

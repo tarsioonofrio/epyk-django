@@ -13,7 +13,7 @@ import templates
 
 
 def index(request):
-  """
+    """
   Description:
   ------------
   Basic example using a Jinja template.
@@ -27,14 +27,14 @@ def index(request):
   ----------
   :param request:
   """
-  if request.GET.get('refresh') == 'Y':
-    templates.refresh('index')
+    if request.GET.get('refresh') == 'Y':
+        templates.refresh('index')
 
-  return render(request, 'views/index.html', {'name': 'Test'})
+    return render(request, 'views/index.html', {'name': 'Test'})
 
 
 def viewer(request, name):
-  """
+    """
   Description:
   ------------
   Generic viewer to load bespoke based on name.
@@ -44,14 +44,14 @@ def viewer(request, name):
   :param request:
   :param name: String. The report name
   """
-  if request.GET.get('refresh') == 'Y':
-    templates.refresh(name)
+    if request.GET.get('refresh') == 'Y':
+        templates.refresh(name)
 
-  return render(request, 'views/%s.html' % name, {})
+    return render(request, 'views/%s.html' % name, {})
 
 
 def chart(request):
-  """
+    """
   Description:
   ------------
   Example of report using Plotly and Goe charts
@@ -60,11 +60,11 @@ def chart(request):
   ----------
   :param request:
   """
-  return render(request, 'views/chart.html', {})
+    return render(request, 'views/chart.html', {})
 
 
 def dynamic(request):
-  """
+    """
   Description:
   ------------
   Dynamic report automatically generated in the view.
@@ -75,12 +75,12 @@ def dynamic(request):
   ----------
   :param request:
   """
-  page = Report()
-  page.headers.dev()
-  div = page.ui.div("Hellow World!")
-  button = page.ui.button("Click Me")
-  div.style.css.color = 'red'
-  button.click([
-    page.js.alert("Clicked")
-  ])
-  return HttpResponse(page.outs.html())
+    page = Report()
+    page.headers.dev()
+    div = page.ui.div("Hellow World!")
+    button = page.ui.button("Click Me")
+    div.style.css.color = 'red'
+    button.click([
+        page.js.alert("Clicked")
+    ])
+    return HttpResponse(page.outs.html())

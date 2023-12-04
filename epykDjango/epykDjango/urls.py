@@ -18,7 +18,6 @@ from django.urls import path
 
 from epykDjango import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dynamic', views.dynamic, name='dynamic'),

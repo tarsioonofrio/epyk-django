@@ -49,3 +49,4 @@ outs/*
 dist/*
 build/*
 *egg-info*
+.idea/
