@@ -14,14 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from epykDjango import views
+from django.urls import path, include
 
 urlpatterns = [
+    path('', include("views.urls")),
     path('admin/', admin.site.urls),
-    path('dynamic', views.dynamic, name='dynamic'),
-    path('views/<str:name>/', views.viewer),
-    path('jinja', views.index, name='index'),
-    path('chart', views.chart, name='chart'),
 ]
